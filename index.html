@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alsyahmi - Link in Bio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+        
+        .profile-name {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #222;
+        }
+        
+        .profile-desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .link-button {
+            display: block;
+            padding: 15px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+        }
+        
+        .link-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            background-color: #f0f0f0;
+        }
+        
+        .link-button.ig {
+            color: #E1306C;
+        }
+        
+        .link-button.tiktok {
+            color: #000;
+        }
+        
+        .link-button.wa {
+            color: #25D366;
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="profile">
+            <img src="https://via.placeholder.com/150" alt="Profile Photo" class="profile-img" id="profile-pic">
+            <h1 class="profile-name">alsyahmi</h1>
+            <p class="profile-desc">jaktim kw</p>
+        </header>
+        
+        <div class="links">
+            <a href="https://www.instagram.com/m.dzakiahza" class="link-button ig" target="_blank">Instagram: @m.dzakiahza</a>
+            <a href="https://www.tiktok.com/@alsyahmii_" class="link-button tiktok" target="_blank">TikTok: @alsyahmii_</a>
+            <a href="https://wa.me/6281214256641" class="link-button wa" target="_blank">WhatsApp: +62 812-1425-6641</a>
+        </div>
+        
+        <footer>
+            © 2023 alshaymi - Link in Bio
+        </footer>
+    </div>
+
+    <script>
+        // Anda bisa mengganti URL gambar profil dengan yang sesuai
+        document.getElementById('profile-pic').src = 'profile.png';
+        
+        // Animasi sederhana saat tombol diklik
+        document.querySelectorAll('.link-button').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-2px)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
